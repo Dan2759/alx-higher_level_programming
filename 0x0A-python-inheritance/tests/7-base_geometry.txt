@@ -1,0 +1,27 @@
+Test for 7-main.py
+
+using 'BaseGeometry'
+
+Importing class from the modules:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Trying to print the area
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+
+exeption: area() is not implemented
+
+Trying to pass a non-integer argument
+>>> bg = BaseGeomentry()
+>>> bg.integer_validator("name", "s")
+Tracebask (most recent call lat):
+
+TypeError: name must be an integer
+
+trying to pass a boolean value
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", True)
+Traceback (most recent call Last):
+
+TypeError: name must be an integer
