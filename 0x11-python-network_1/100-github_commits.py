@@ -20,6 +20,6 @@ if __name__ == '__main__':
         if i > 9:
             break
         sha = element.get('sha')
-        author = element.get('commit').get('author').get('name')
-        print("{}: {}".format(sha, author))
+        author_name = element.get('commit').get('author').get('name')
+        print("{}: {}".format(sha, author_name))
         i += 1
