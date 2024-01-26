@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     with urllib.request.urlopen(request) as response:
         body = response.read()
-        print(f"Body response:")
-        print(f"\t- type: {}".format(type(body)))
-        print(f"\t- content: {}".format(body))
-        print(f"\t- utf8 content: {}".format(body.decode('utf-8')))
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode('utf-8')))
