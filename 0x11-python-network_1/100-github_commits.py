@@ -7,11 +7,11 @@ from requests import get
 from sys import argv
 
 if __name__ == '__main__':
-    repo_name = argv[1]
-    owner_name = argv[2]
+    repo = argv[1]
+    owner = argv[2]
     i = 0
 
-     URL = "https://api.github.com/repos/{}/{}/commits".format(owner_name, repo_name)
+     URL = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
 
     response = get(URL)
     json = response.json()
@@ -20,6 +20,6 @@ if __name__ == '__main__':
         if i > 9:
             break
         sha = element.get('sha')
-        author_name = element.get('commit').get('author').get('name')
-        print("{}: {}".format(sha, author_name))
+        author = element.get('commit').get('author').get('name')
+        print("{}: {}".format(sha, author))
         i += 1
